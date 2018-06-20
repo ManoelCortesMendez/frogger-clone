@@ -1,3 +1,25 @@
 body {
     text-align: center;
 }
+
+#victory-modal {
+  width: 100px;
+  height: 100px;
+  margin-top: 180px;
+  border: none;
+  border-radius: 8px;
+  font-family: sans-serif;
+  background-color: #afb42b;
+}
+
+#play-again-btn {
+  margin-top: 8px;
+  background-color: #e4e65e;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+#play-again-btn:hover {
+  background-color: #7c8500;
+}

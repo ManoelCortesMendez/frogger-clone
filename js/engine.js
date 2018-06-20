@@ -102,9 +102,16 @@ var Engine = (function(global) {
       // If the players reaches the water lane at the top...
       if (player.y < 60) {
         // Then he won. Let the player know via a modal.
+        const modal = document.getElementById('victory-modal');
+        modal.setAttribute('open', 'true');
         // Then stop all enemies.
         allEnemies.forEach(function(enemy) {
           enemy.speed = 0;
+        })
+        // Then allow player to play again via button.
+        const playAgainBtn = document.getElementById('play-again-btn');
+        playAgainBtn.addEventListener('click', function() {
+          window.location.reload();
         })
       }
     }
