@@ -99,16 +99,16 @@ var Engine = (function(global) {
 
     /** Check if the player won the game by reaching the water. */
     function checkVictory() {
-      // If the players reaches the water lane at the top...
+      // If the player reaches the water lane (at the top)...
       if (player.y < 60) {
         // Then he won. Let the player know via a modal.
         const modal = document.getElementById('victory-modal');
         modal.setAttribute('open', 'true');
-        // Then stop all enemies.
+        // Stop all enemies.
         allEnemies.forEach(function(enemy) {
           enemy.speed = 0;
         })
-        // Then allow player to play again via button.
+        // Allow player to play again via button.
         const playAgainBtn = document.getElementById('play-again-btn');
         playAgainBtn.addEventListener('click', function() {
           window.location.reload();

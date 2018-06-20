@@ -74,7 +74,7 @@ Player.prototype.render = function() {
 };
 
 /**
- * Move player according to the direction key pressed on the keyboard.
+ * Move player according to the arrow key pressed on the keyboard.
  * @param {string} moveDir - The direction in which to move the player.
  */
 Player.prototype.handleInput = function(moveDir) {
@@ -101,7 +101,7 @@ function makeEnemy(lane) {
   return enemy
 }
 
-// Instantiate enemies and add them to array
+// Instantiate enemies and add them to array.
 const allEnemies = [];
 allEnemies.push(makeEnemy(1));
 allEnemies.push(makeEnemy(2));
@@ -110,7 +110,7 @@ allEnemies.push(makeEnemy(3));
 // Instantiate player
 const player = new Player(200, 400);
 
-// Listen for keypresses and pass direction to handleInput() method
+// Listen for keypresses and pass direction to handleInput() method.
 document.addEventListener('keyup', function(e) {
     const allowedKeys = {
         37: 'left',
